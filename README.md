@@ -5,6 +5,12 @@
 ```text
 Asac-ML-project/
 │
+├── src/                   # 실제 실행 가능한 소스 코드
+│   ├── data_loader.py     # 데이터 로드 및 수집 스크립트
+│   ├── preprocessing.py   # 결측치 처리, 정규화 등 전처리 모듈
+│   ├── feature.py         # 피처 엔지니어링 관련 모듈
+│   ├── model.py           # 모델 정의 및 학습 스크립트
+│   └── utils.py           # 공통 유틸리티 함수 (로깅, 시간 계산 등)
 ├── data/                  # 데이터 저장 공간 (Git에 업로드 금지)
 │   ├── raw/               # 원본 데이터 (수정 불가)
 │   ├── processed/         # 전처리 완료된 데이터
@@ -15,12 +21,6 @@ Asac-ML-project/
 │   ├── meeting-notes/     # 회의록
 │   └── reports/           # 최종 보고서 및 중간 발표 자료
 │
-├── src/                   # 실제 실행 가능한 소스 코드
-│   ├── data_loader.py     # 데이터 로드 및 수집 스크립트
-│   ├── preprocessing.py   # 결측치 처리, 정규화 등 전처리 모듈
-│   ├── feature.py         # 피처 엔지니어링 관련 모듈
-│   ├── model.py           # 모델 정의 및 학습 스크립트
-│   └── utils.py           # 공통 유틸리티 함수 (로깅, 시간 계산 등)
 │
 ├── etc/                   # 그 외 기타 파일
 │   ├── notebooks/         # EDA 및 프로토타입 테스트용 Jupyter Notebook (.ipynb)
