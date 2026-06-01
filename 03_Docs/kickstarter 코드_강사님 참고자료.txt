@@ -1,0 +1,90 @@
+#######################
+import requests
+import json
+url = 'https://www.kickstarter.com/graph'
+
+headers = headers = {
+    "Accept": "application/json, text/plain, */*",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept-Language": "ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7",
+    "Content-Type": "application/json",
+    "Origin": "https://www.kickstarter.com",
+    "Referer": "https://www.kickstarter.com/", # 혹은 실제 접속하신 상세 페이지 URL
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+   
+    # [중요] 아래는 개발자 도구의 Request Headers에서 복사해서 붙여넣으세요
+    "Cookie": "vis=6d57eb45114bd73d-7e31d1602786aa5f-5059cf8b7a6d497fv1; lang=en; woe_id=NTaFbOs%2B2Z84bSZFE22nyklJlEnTk9LyxA9umuS%2BwT1l8zoW%2FRDRAhC9%2BLkPBouG5N9US37fX3l05c%2BG0ya8Sc8NOfYMDBr21M4jVzrFrI04yT9V9Pzi65ooIP8%3D--v2MhrVcVEftdCPjU--6JWFqpmk28DlnzADvdFjTQ%3D%3D; cf_clearance=rQIM2l2RX4g_UAZ_rr.YLBjSgVbRTmhaGoG9EMRTC84-1780046538-1.2.1.1-Gmon8X3Ds8aqOvyjKV1Wzrnfqf2kqc5cc_OAuU2JlQ56nLcdORQ_wDW1yt53YZRAInMyWO0D36OEOJjlgiK65y5qBMp218mcm9y0756tSs7ryXJZFYBpsvy8AmbOAYPUx1si.r443.n7EE3V.ZcWd0F7HZO7z3vCcMOzSTdOk5sQie1hjSbaYgvVJRLW9UoKniueI9cP3Gh5X.WAZcHjAH1C2dd7duR1FIUj54n51jke30pS8wKFpEDo7mmPpG5j4Z1udp19XW_RH54IJokP.B.KvBcUnvKqlpwvLzifRhJc5AYCe784LmLVQNsLYLns.Xbe8HPlTG2x5Eqne2867A; __cf_bm=XV3GwKTFl5kBnZHixfAR2_TJ1ddZnH36F9Zvbw8Vjzo-1780046538.9628026-1.0.1.1-TL8aeLnKhj9UV84UUCLVCf3asOv3v1fOgtbhM7EVAa6YGuRgX4lXmgFRdCpzY15fgS5w3xWXtJIL483hxOJFz4c.1s.socPEatytf1v1USOwC6TvNQjvxbFT4LqeSOBw; ksr_consent=%7B%22purposes%22%3A%7B%22SaleOfInfo%22%3A%22Auto%22%7C%22Analytics%22%3A%22Auto%22%7C%22Functional%22%3A%22Auto%22%7C%22Advertising%22%3A%22Auto%22%7D%7C%22confirmed%22%3Afalse%7C%22prompted%22%3Afalse%7C%22timestamp%22%3A%222026-05-29T09%3A22%3A29.435Z%22%7C%22updated%22%3Afalse%7D; last_page=https%3A%2F%2Fwww.kickstarter.com%2Fdiscover%2Fcategories%2Fgames; _ksr_session=mbM9LWZhgAwZon%2FHFvdB9fE163mDKJWD4Q%2Fj5mFm%2FUKeKBr5FRWBveyuMXGQJ9FwOnagoxOTR3gR8kKD%2Bx5UvGLLIWTym8fh0Bv4TKmKakKLeBbTH53BvqpZg0r5cuTmY3D34GwCgIaPh2nvpHKnVD7YNWnJansufAbnqaaNzHey05B06VqthQw0DHl2URL2gYXvCF5bk0kf7Sm4OYLyIY5JaBl7hGcIArOHSxCNlqMrIFPBU0pLfXFytTcSsujsqOYTeI%2BhWP3PH0E4UCSQtKFV7DhQf8Gjl1XhYvDOLaTRJYPIi56fpDbIe8zcNvbf7MIHtuhMPTtlZFJi9hvPtwI716k5tIKXVZgqbmQvzu4gpOWi--Laopeka5gw7AiuFy--pyztX21QLimqVb1WI1QuJg%3D%3D; request_time=Fri%2C+29+May+2026+09%3A22%3A44+-0000; local_offset=-2907",
+    "X-Csrf-Token": "qEfSbBlaLOaLc96Ppcdc9TbLW2ckGYXe8_uVYzItupZ8eM7BnxzxXmG8f5SUdP6RrHhM4Q6T2DGKzmyxWNQWcA",
+   
+    # 추가 권장 헤더 (보안 필터 우회용)
+    "Sec-Ch-Ua": '"Chromium";v="148", "Google Chrome";v="148", "Not/A)Brand";v="99"',
+    "Sec-Ch-Ua-Mobile": "?0",
+    "Sec-Ch-Ua-Platform": '"Windows"',
+    "Sec-Fetch-Dest": "empty",
+    "Sec-Fetch-Mode": "cors",
+    "Sec-Fetch-Site": "same-origin"
+}
+
+
+def fetch_kickstarter_projects(next_cursor=None):
+    url = "https://www.kickstarter.com/graph"
+   
+    # 2. 제공해주신 GraphQL 쿼리
+    query = """
+    query($nextCursor: String) {
+      projects(recommended: true, first: 6, after: $nextCursor, state: LIVE) {
+        edges {
+          node {
+            id
+            pid
+            name
+            url
+            percentFunded
+            backersCount
+            pledged { amount }
+            category { name }
+            profile { blurb }
+          }
+          cursor
+        }
+      }
+    }
+    """
+   
+    payload = {
+        "query": query,
+        "variables": {"nextCursor": next_cursor}
+    }
+   
+    response = requests.post(url, headers=headers, json=payload)
+    return response.json()
+
+# 3. 롤링 실행 로직
+all_projects = []
+current_cursor = None
+
+print("데이터 수집 시작...")
+for page in range(1, 6):  # 5페이지까지 반복
+    data = fetch_kickstarter_projects(current_cursor)
+   
+    try:
+        edges = data['data']['projects']['edges']
+        if not edges:
+            break
+           
+        all_projects.extend(edges)
+        # 다음 페이지를 위해 마지막 커서 업데이트
+        current_cursor = edges[-1]['cursor']
+        print(f"페이지 {page} 완료: {len(edges)}개 프로젝트 수집 (다음 커서: {current_cursor})")
+       
+    except (KeyError, TypeError) as e:
+        print("데이터 추출 중 에러 발생:", data)
+        break
+
+print(f"총 {len(all_projects)}개의 프로젝트 데이터를 수집했습니다.")
+
+
+
+for i in all_projects:
+    print(i["node"]["name"])
+    print("*"*100)
