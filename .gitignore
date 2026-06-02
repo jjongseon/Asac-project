@@ -3,8 +3,8 @@
 
 
 # .gitkeep 파일 예외
-data/**
-!data/**/.gitkeep
+02_Data/**
+!02_Data/**/.gitkeep
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
