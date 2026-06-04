@@ -1,6 +1,56 @@
 # Asac-ML-project
 
 ## 📂 프로젝트 폴더 구조 (Directory Structure)
+```mermaid
+erDiagram
+    PROJECT ||--o{ REWARD : "contains"
+
+    PROJECT {
+        int projectID PK "프로젝트 고유 ID"
+        string name "프로젝트명"
+        string creator "창작자명"
+        int creatorID "창작자 ID"
+        string homeUrl "홈페이지 URL"
+        string currencySymbol "통화 기호"
+        float campaignGoal "캠페인 목표 금액"
+        float fundsGathered "모인 금액"
+        int backersCount "후원자 수"
+        string campaignStart "캠페인 시작일"
+        string campaignEnd "캠페인 종료일"
+        string phaseLabel "진행 단계"
+        boolean enableBoardGameProperties "보드게임 속성 활성화 여부"
+        float minPlayers "최소 인원 (Null 가능)"
+        float maxPlayers "최대 인원 (Null 가능)"
+        float minAge "최소 연령 (Null 가능)"
+        float playTime "플레이 시간 (Null 가능)"
+        int playTimeUnit "플레이 시간 단위"
+        int fundedInSeconds "펀딩 성공 소요 시간(초)"
+        string imageUrl "이미지 URL"
+        string pledgeManagerSoftCloseDeadline "PM 마감일 (Null 가능)"
+        string projectTags "프로젝트 태그"
+        int originalType "원본 타입"
+    }
+
+    REWARD {
+        int productID PK "리워드/상품 고유 ID"
+        int projectID FK "소속 프로젝트 ID"
+        string main_name "리워드명"
+        string anchorRelativeUrl "리워드 상대 경로 URL"
+        float price "가격"
+        boolean isDiscounted "할인 여부"
+        float effectivePrice "실제 판매 가격"
+        boolean isFeatured "추천 여부"
+        int purchasedCopiesCount "판매된 수량"
+        string backgroundUrl "배경 이미지 URL"
+        float installmentCost "할부 비용 (Null 가능)"
+        float installmentMinPayment "최소 할부 금액 (Null 가능)"
+        boolean hasLimitedStock "수량 제한 여부"
+        boolean productCanBePurchased "구매 가능 여부"
+        float remainingStockLimit "잔여 수량 (Null 가능)"
+    }
+
+
+
 
 ```text
 Asac-ML-project/
