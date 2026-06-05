@@ -48,6 +48,7 @@ erDiagram
         boolean productCanBePurchased "구매 가능 여부"
         float remainingStockLimit "잔여 수량 (Null 가능)"
     }
+```
 
 Asac-ML-project/
 │
