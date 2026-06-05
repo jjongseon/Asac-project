@@ -50,6 +50,7 @@ erDiagram
     }
 ```
 ## 📂프로젝트 폴더 구조 (ERD)
+```text
 Asac-ML-project/
 │
 ├── src/                    # 실제 실행 가능한 소스 코드
@@ -74,3 +75,4 @@ Asac-ML-project/
 │   └── templates/          # 참고용 템플릿 파일
 │
 └── README.md              # 프로젝트 개요 및 실행 방법 설명서
+```
