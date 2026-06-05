@@ -49,7 +49,7 @@ erDiagram
         float remainingStockLimit "잔여 수량 (Null 가능)"
     }
 ```
-
+## 📂프로젝트 폴더 구조 (ERD)
 Asac-ML-project/
 │
 ├── src/                    # 실제 실행 가능한 소스 코드
