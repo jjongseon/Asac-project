@@ -1,0 +1,68 @@
+﻿thread_id,projectID,thread_text,comment_count,category
+15374.0,222,Personal files added...,1,Please provide the text of the thread you would like me to analyze.
+94755.0,1032,#language,1,Please provide the thread text you would like me to analyze.
+94796.0,1032,#language,1,Please provide the thread text you would like me to analyze.
+136861.0,887,#spanish,1,Please provide the thread text you would like me to analyze.
+195357.0,889,#italian,1,Please provide the text you would like me to analyze.
+197985.0,889,#italian,1,"Please provide the thread text you would like me to analyze! You didn't include the conversation under ""#italian""."
+198372.0,889,#italian,1,"Please provide the thread text you would like me to analyze! You included the tag ""#italian"" but did not include the conversation content. Once you provide it, I will output the category immediately."
+198839.0,889,#italian,1,Please provide the thread text you would like me to analyze!
+200432.0,889,#italian,1,Please provide the thread text so I can classify it for you.
+385072.0,2460,#langage,1,Please provide the text of the thread you would like me to classify.
+574194.0,2757,#italian,1,Please provide the text you would like me to analyze.
+576834.0,2757,#italian,1,"Please provide the thread text you would like me to analyze! You didn't include the conversation under ""#italian"". Once you provide it, I will categorize it immediately."
+577542.0,2757,#italian,1,"Please provide the thread text you would like me to analyze! You included the tag ""#italian"" but did not include the content of the comments."
+580193.0,2757,#italian,1,"Please provide the thread text you would like me to analyze! You included the tag ""#italian"", but the text itself is missing. Once you paste the conversation, I will classify it for you."
+583372.0,2757,#italian,1,"Please provide the thread text you would like me to analyze! You included the tag ""#italian"" but did not include the conversation content. Once you provide the text, I will categorize it immediately."
+583536.0,2757,#italian,1,"Please provide the thread text you would like me to analyze! You ended your prompt with ""#italian"" but did not include the conversation content. Once you provide the text, I will categorize it immediately."
+590411.0,2757,#italian,1,Please provide the thread text you would like me to analyze.
+591554.0,2757,#italian,1,"Please provide the thread text you would like me to analyze! You didn't include the conversation under ""#italian""."
+620384.0,2518,#spanish,1,"Please provide the thread text you would like me to analyze! You ended your prompt with `#spanish`, but the content is missing. Once you provide the text, I will output the category immediately."
+620522.0,2518,#German,1,Please provide the German thread text you would like me to analyze.
+620620.0,2518,#German,1,"Bitte geben Sie den Text des Threads an, damit ich ihn analysieren kann."
+621006.0,2518,#spanish,1,"Por favor, proporcione el texto del hilo de comentarios que desea analizar."
+621063.0,2518,#spanish,1,Please provide the thread text you would like me to analyze.
+621067.0,2518,#german,1,Please provide the thread text you would like me to analyze.
+622622.0,2518,#german,1,Please provide the thread text so I can classify it for you.
+626676.0,2518,#Spanish,1,Please provide the thread text so I can analyze it and classify it for you.
+628466.0,2518,#italian,1,"Please provide the thread text you would like me to analyze! You ended your prompt with ""#italian"", but did not include the content for me to classify."
+629672.0,2518,#spanish,1,Please provide the thread text you would like me to analyze! You haven't included the content after the `#spanish` tag.
+629759.0,2518,#spanish,1,Please provide the text you would like me to analyze.
+630106.0,2518,#spanish,1,Please provide the thread text you would like me to analyze! You didn't include it in your prompt.
+630125.0,2518,#italian,1,"Please provide the thread text you would like me to analyze! You didn't include the conversation under ""#italian""."
+630265.0,2518,#spanish,1,"Please provide the thread text you would like me to analyze! You ended your message with ""#spanish"", but did not include the specific user comments. Once you provide the text, I will categorize it immediately."
+630317.0,2518,#spanish,1,Please provide the thread text you would like me to analyze.
+630334.0,2518,#spanish,1,Please provide the text you would like me to analyze! You haven't included the thread text yet.
+630864.0,2518,#French,1,"Please provide the thread text you would like me to analyze! You didn't include the content after ""#French""."
+639329.0,2518,#spanish,1,Please provide the thread text you would like me to analyze.
+641170.0,2518,#spanish,1,Please provide the specific thread text you would like me to analyze.
+647642.0,2518,#Spanish,1,Please provide the thread text you would like me to analyze.
+648746.0,2518,#german,1,Please provide the thread text you would like me to analyze.
+649192.0,2518,#german,1,Please provide the thread text you would like me to analyze.
+649395.0,2518,#italian,1,"Please provide the thread text you would like me to analyze! You included the tag ""#italian"" but did not include the specific user comments you need categorized."
+786105.0,2225,#spanish,1,Please provide the text of the thread you would like me to classify.
+786511.0,2225,#spanish,1,Please provide the thread text you would like me to analyze!
+929741.0,3848,#italian,1,"Please provide the thread text you would like me to analyze! You included the tag ""#italian"" but the actual content of the thread is missing."
+931798.0,3848,#italian,1,Please provide the thread text so I can categorize it for you.
+936651.0,3848,#italian,1,Please provide the thread text you would like me to analyze.
+948746.0,3848,#italian,1,"Please provide the thread text you would like me to analyze! You ended your prompt with `#italian` but did not include the content. Once you provide the text, I will categorize it immediately."
+950205.0,3848,#italian,1,"Please provide the thread text you would like me to analyze! You ended your prompt with ""#italian"" but did not include the specific user comments. Once you paste the text, I will categorize it immediately."
+950739.0,3848,#italian,1,Please provide the thread text you would like me to analyze! You didn't include the conversation under your header.
+1118791.0,4400,#spanish,1,"Please provide the thread text you would like me to analyze! You didn't include the text after ""#spanish""."
+1200105.0,4400,#spanish,1,"Please provide the thread text you would like me to analyze! You included the tag ""#spanish"" but no content followed. Once you provide the text, I will classify it immediately."
+1201860.0,3493,#italian,1,Please provide the text of the thread you would like me to analyze.
+1242038.0,4664,To follow,1,Please provide the thread text you would like me to analyze.
+1277444.0,4664,#french,1,Please provide the text you would like me to analyze.
+1402313.0,5030,#GERMAN,1,Please provide the thread text you would like me to analyze.
+1576512.0,4475,#italian,1,Please provide the thread text so I can classify it for you.
+1603723.0,4874,#german,1,Please provide the thread text you would like me to analyze.
+2424267.0,6626,#italian,1,"Please provide the thread text you would like me to analyze! You included the tag ""#italian"" but the actual content of the thread is missing."
+2459292.0,8526,#italian,1,Please provide the thread text you would like me to analyze! You didn't include the conversation under your header.
+2488810.0,8203,#german,1,Please provide the thread text you would like me to analyze.
+2489072.0,8203,#spanish,1,Please provide the text you would like me to classify.
+2489214.0,8203,#spanish,1,"Please provide the thread text you would like me to analyze! You didn't include it in your prompt. Once you paste the text, I will categorize it immediately."
+2495983.0,8203,#spanish,1,Please provide the thread text you would like me to analyze!
+2552546.0,6631,#Spanish,1,Please provide the thread text you would like me to analyze!
+2553128.0,6631,#Portuguese,1,Please provide the thread text you would like me to analyze.
+2560979.0,6631,#spanish,1,"Please provide the thread text you would like me to analyze! You didn't include the text after ""#spanish""."
+2595354.0,6631,#spanish,1,Please provide the specific text of the thread you would like me to analyze!

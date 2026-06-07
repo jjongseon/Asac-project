@@ -1,7 +1,7 @@
 # Created by https://www.toptal.com/developers/gitignore/api/python
 # Edit at https://www.toptal.com/developers/gitignore?templates=python
 
-
+api_key.txt
 # .gitkeep 파일 예외
 02_Data/**
 !02_Data/**/.gitkeep
